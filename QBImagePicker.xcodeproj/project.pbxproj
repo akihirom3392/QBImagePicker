@@ -84,6 +84,9 @@
 		74BB93661B2CE91A0044EB60 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
 		790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSlomoIconView.h; sourceTree = "<group>"; };
 		790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSlomoIconView.m; sourceTree = "<group>"; };
+		87D61F7228447AFE007CFD1E /* QBImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBImagePickerTests.swift; sourceTree = "<group>"; };
+		87D61F7328447AFF007CFD1E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		87D61F7628447AFF007CFD1E /* QBImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBImagePicker.swift; sourceTree = "<group>"; };
 		AA3AD06D1ACF9A3A00BF523E /* QBVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIconView.h; sourceTree = "<group>"; };
 		AA3AD06E1ACF9A3A00BF523E /* QBVideoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBVideoIconView.m; sourceTree = "<group>"; };
 		AA3AD0711ACFA06700BF523E /* QBVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIndicatorView.h; sourceTree = "<group>"; };
@@ -160,7 +163,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA3AD0751ACFA22500BF523E /* Views */ = {
+		87D61F7028447AFE007CFD1E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				87D61F7128447AFE007CFD1E /* QBImagePickerTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		87D61F7128447AFE007CFD1E /* QBImagePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				87D61F7228447AFE007CFD1E /* QBImagePickerTests.swift */,
+				AAA8FE151ACDA079002A9710 /* QBImagePickerTests.m */,
+				87D61F7A28447D1C007CFD1E /* Resource */,
+			);
+			path = QBImagePickerTests;
+			sourceTree = "<group>";
+		};
+		87D61F7428447AFF007CFD1E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				87D61F7528447AFF007CFD1E /* QBImagePicker */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		87D61F7528447AFF007CFD1E /* QBImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				87D61F7628447AFF007CFD1E /* QBImagePicker.swift */,
+				AAA8FE081ACDA079002A9710 /* QBImagePicker.h */,
+				87D61F7828447B44007CFD1E /* Views */,
+				87D61F7928447B57007CFD1E /* ViewControllers */,
+				87D61F7728447B07007CFD1E /* Resources */,
+			);
+			path = QBImagePicker;
+			sourceTree = "<group>";
+		};
+		87D61F7728447B07007CFD1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAF1CA221ACE5598005F6295 /* QBImagePicker.storyboard */,
+				AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */,
+				AAA8FE071ACDA079002A9710 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		87D61F7828447B44007CFD1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AAF1CA181ACE5467005F6295 /* QBAlbumCell.h */,
@@ -176,10 +227,10 @@
 				AA3AD0711ACFA06700BF523E /* QBVideoIndicatorView.h */,
 				AA3AD0721ACFA06700BF523E /* QBVideoIndicatorView.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		AA3AD0761ACFA23300BF523E /* ViewControllers */ = {
+		87D61F7928447B57007CFD1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				AAA8FE1F1ACDA090002A9710 /* QBImagePickerController.h */,
@@ -189,14 +240,23 @@
 				AAF1CA2D1ACE6E46005F6295 /* QBAssetsViewController.h */,
 				AAF1CA2E1ACE6E46005F6295 /* QBAssetsViewController.m */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		87D61F7A28447D1C007CFD1E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AAA8FE141ACDA079002A9710 /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		AAA8FDF91ACDA079002A9710 = {
 			isa = PBXGroup;
 			children = (
-				AAA8FE051ACDA079002A9710 /* QBImagePicker */,
-				AAA8FE121ACDA079002A9710 /* QBImagePickerTests */,
+				87D61F7328447AFF007CFD1E /* Package.swift */,
+				87D61F7428447AFF007CFD1E /* Sources */,
+				87D61F7028447AFE007CFD1E /* Tests */,
 				AAA8FE281ACDA0CE002A9710 /* QBImagePickerDemo */,
 				AAA8FE421ACDA0CE002A9710 /* QBImagePickerDemoTests */,
 				AAA8FE041ACDA079002A9710 /* Products */,
@@ -212,43 +272,6 @@
 				AAA8FE3F1ACDA0CE002A9710 /* QBImagePickerDemoTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AAA8FE051ACDA079002A9710 /* QBImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				AAA8FE081ACDA079002A9710 /* QBImagePicker.h */,
-				AA3AD0751ACFA22500BF523E /* Views */,
-				AA3AD0761ACFA23300BF523E /* ViewControllers */,
-				AAF1CA241ACE5665005F6295 /* Resources */,
-				AAA8FE061ACDA079002A9710 /* Supporting Files */,
-			);
-			path = QBImagePicker;
-			sourceTree = "<group>";
-		};
-		AAA8FE061ACDA079002A9710 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAA8FE071ACDA079002A9710 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AAA8FE121ACDA079002A9710 /* QBImagePickerTests */ = {
-			isa = PBXGroup;
-			children = (
-				AAA8FE151ACDA079002A9710 /* QBImagePickerTests.m */,
-				AAA8FE131ACDA079002A9710 /* Supporting Files */,
-			);
-			path = QBImagePickerTests;
-			sourceTree = "<group>";
-		};
-		AAA8FE131ACDA079002A9710 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAA8FE141ACDA079002A9710 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		AAA8FE281ACDA0CE002A9710 /* QBImagePickerDemo */ = {
@@ -296,15 +319,6 @@
 				AAA8FE331ACDA0CE002A9710 /* Main.storyboard */,
 				AAA8FE381ACDA0CE002A9710 /* LaunchScreen.xib */,
 				AAA8FE361ACDA0CE002A9710 /* Images.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		AAF1CA241ACE5665005F6295 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AAF1CA221ACE5598005F6295 /* QBImagePicker.storyboard */,
-				AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -710,7 +724,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = QBImagePicker/Info.plist;
+				INFOPLIST_FILE = Sources/QBImagePicker/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 4.0.0;
@@ -727,7 +741,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = QBImagePicker/Info.plist;
+				INFOPLIST_FILE = Sources/QBImagePicker/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 4.0.0;
@@ -745,7 +759,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = QBImagePickerTests/Info.plist;
+				INFOPLIST_FILE = Tests/QBImagePickerTests/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.questbeat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,7 +770,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = QBImagePickerTests/Info.plist;
+				INFOPLIST_FILE = Tests/QBImagePickerTests/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.questbeat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
